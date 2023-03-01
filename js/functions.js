@@ -14,26 +14,43 @@ let computerMove = 'kamień';
 let roundNumber = Math.floor(Math.random()* 3 + 1);
 console.log('Wylosowana liczba to '+roundNumber);
 
-
 if(roundNumber == 1){
-	printMessage('Kamień');
-} else if (roundNumber==2){
-    printMessage('Nozyce')
+	computerMove=('kamień');
+} else if (roundNumber== 2){
+    computerMove=('papier')
 } else {
-    printMessage('Papier')
+    computerMove=('nozyce')
 } 
-let playerInput = prompt ('Wybierz swój ruch! 1: kamień, 2: papier, 3:nozyce.');
+
+let playerInput = prompt ('Wybierz swój ruch! 1: kamień, 2: papier, 3: nozyce.');
 console.log ('Gracz wspisał: ' + playerInput);
 let playerMove= 'nieznany ruch';
 
 if (playerInput =='1'){
-    playerMove= 'Kamień';
+    playerMove= 'kamień';
 } else if (playerInput=='2'){
-    playerMove= 'Nozyce';
+    playerMove= 'papier';
 } else if ( playerInput=='3'){
-    playerMove= 'Papier';
+    playerMove= 'nozyce';
 } 
 printMessage ('Twój ruch to: '+playerMove);
 
-printMessage ('Zagrełem ' + computerMove +'! Jeśli Twój ruch to '+ playerMove +', to wygrywasz!');
 
+let gameOutput = ', to wygrywasz!'
+
+if ( computerMove == 'kamień' && playerMove == 'papier'){
+    gameOutput = ', to wygrywasz!';
+} else if ( computerMove == 'papier' && playerMove == 'nozyce'){
+    gameOutput = ', to wygrywasz!';
+} else if ( computerMove == 'nozyce' && playerMove == 'kamień'){
+    gameOutput = ', to wygrywasz!';
+} else if ( computerMove == 'kamień' && playerMove == 'papier'){
+    gameOutput = ', to wygrywasz!';
+} else if ( computerMove == 'papier' && playerMove == 'nozyce'){
+    gameOutput = ', to wygrywasz!';
+} else if ( computerMove == playerMove){
+    gameOutput = ', to jest remis!';
+} else {
+    gameOutput = ', to przegrywasz!'
+}
+printMessage ('Zagrełem ' + computerMove +'! Jeśli Twój ruch to '+ playerMove + gameOutput);

@@ -1,0 +1,58 @@
+/*Variable*/
+$color-main: #18daa3; /*green*/
+$color-light: #fff; /*white*/
+$color-dark: #000e0e; /*almost black*/
+$color-body: #a0a0a0; /* gray color of the font */
+
+$font-text: 'Inconsolata', monospace;
+$font-head: 'Signika', sans-serif;
+
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.title {
+    font-size: 42px;
+    word-spacing: -5px;
+    line-height: 1.5;
+    color: $color-dark;
+    font-family: $font-head;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    word-spacing: 5px;
+}
+
+button {
+    display: inline-block;
+    min-width: 160px;
+    margin: 24px auto 24px auto;
+    padding: 5px;
+    font-family: $font-text;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-width: 2px;
+    border-style: solid;
+    background-position: 100% 0;
+    background-size: 300%;
+    border-radius: 20px;
+}
+.all-buttons i {
+    font-size: 30px;
+    background: $color-main;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: $color-main;
+    border-radius: 50%;
+}
+
+.all-buttons img {
+    position: relative;
+    width: 300px;
+    height: 230px;
+}
